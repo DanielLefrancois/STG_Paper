@@ -1,0 +1,496 @@
+This is pdfTeX, Version 3.1415926-1.40.11 (TeX Live 2010) (format=pdflatex 2011.4.13)  9 NOV 2015 13:21
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**draft.tex
+(./draft.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, arabic, armenian
+, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, u
+kenglish, usenglishmax, esperanto, estonian, farsi, finnish, french, galician, 
+german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese,
+ bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, 
+telugu, indonesian, interlingua, irish, italian, kurmanji, lao, latin, latvian,
+ lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, roma
+nian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turkish,
+ turkmen, ukrainian, uppersorbian, welsh, loaded.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/revtex/revtex4-1.cls
+Document Class: revtex4-1 2010/02/25/18:00:00 4.1p (http://publish.aps.org/revt
+ex4/ for documentation)
+ Copyright (c) 2009 The American Physical Society.
+ mailto:revtex@aps.org
+ Licensed under the LPPL:
+http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
+ Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
+ Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
+ltxutil[2010/02/25/18:00:00 4.1p utilities package (portions licensed from W. E
+. Baxter web at superscript.com)]
+LaTeX Info: Redefining \@centercr on input line 308.
+Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
+\eqncolsep=\skip41
+Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfoot
+note on input line 433.
+Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
+\intertabularlinepenalty=\count79
+\@tbpen=\count80
+\@arstrutbox@hline=\box26
+Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
+Class revtex4-1 Info: Making \typeout \long on input line 2046.
+ltxfront[2010/02/25/18:00:00 4.1p frontmatter package (AO,DPC)]
+\c@affil=\count81
+\c@collab=\count82
+\absbox=\box27
+ltxgrid[2010/02/25/18:00:00 4.1p page grid package (portions licensed from W. E
+. Baxter web at superscript.com)]
+\c@linecount=\count83
+\output@latex=\toks14
+\box@size@1=\box28
+\box@size@2=\box29
+\@protection@box=\box30
+\@topmark@saved=\toks15
+\footins@saved=\box31
+\footins@recovered=\box32
+\column@recovered=\box33
+\pagesofar=\box34
+\footsofar=\box35
+\pagegrid@col=\count84
+Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and
+ \\  on input line 5578.
+\c@part=\count85
+\c@section=\count86
+\c@subsection=\count87
+\c@subsubsection=\count88
+\c@paragraph=\count89
+\c@subparagraph=\count90
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count91
+\fbox@1=\box36
+\c@table=\count92
+\fbox@2=\box37
+\c@video=\count93
+\fbox@4=\box38
+\@bibdataout=\write3
+\widetext@top=\box39
+\widetext@bot=\box40
+Class revtex4-1 Info: Selecting society aip on input line 7540.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/revtex/aip4-1.rtx
+File: aip4-1.rtx 2010/03/12 4.1p AIP substyle for REVTeX
+Class revtex4-1 Info: RevTeX society AIP selected on input line 67.
+)
+
+Class revtex4-1 Warning: No journal specified, using default cha.
+
+Using journal substyle cha.
+Class revtex4-1 Info: Reading file aps10pt4-1.rtx on input line 7545.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
+File: aps10pt4-1 2010/02/25/18:00:00 4.1p (http://publish.aps.org/revtex4/ for 
+documentation)
+Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
+)
+Class revtex4-1 Info: Overriding 10pt on input line 7545.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen102
+)
+LaTeX Info: Redefining \text on input line 53.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen103
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count94
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count95
+\leftroot@=\count96
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count97
+\DOTSCASE@=\count98
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box41
+\strutbox@=\box42
+\big@size=\dimen104
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count99
+\c@MaxMatrixCols=\count100
+\dotsspace@=\muskip10
+\c@parentequation=\count101
+\dspbrk@lvl=\count102
+\tag@help=\toks17
+\row@=\count103
+\column@=\count104
+\maxfields@=\count105
+\andhelp@=\toks18
+\eqnshift@=\dimen105
+\alignsep@=\dimen106
+\tagshift@=\dimen107
+\tagwidth@=\dimen108
+\totwidth@=\dimen109
+\lineht@=\dimen110
+\@envbody=\toks19
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2009/11/07 8.31a (PWD, AO)
+\bibhang=\skip47
+\bibsep=\skip48
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count106
+)
+Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7547.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/revtex/revsymb4-1.sty
+Package: revsymb4-1 2010/02/25/18:00:00 4.1p (http://publish.aps.org/revtex4/ f
+or documentation)
+LaTeX Info: Redefining \REV@mathfrak on input line 119.
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/02/14 v0.04n Graphics/color for pdfTeX
+\Gread@gobject=\count107
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/dcolumn.sty
+Package: dcolumn 2001/05/28 v1.06 decimal alignment package (DPC)
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen113
+\extrarowheight=\dimen114
+\NC@list=\toks22
+\extratabsurround=\skip49
+\backup@length=\skip50
+))
+(/usr/local/texlive/2010/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
+LaTeX Info: Redefining \bm on input line 204.
+)
+Class revtex4-1 Info: Patching array package. on input line 10.
+Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 10.
+
+Class revtex4-1 Info: cite was not loaded (OK!) on input line 10.
+Class revtex4-1 Info: mcite was not loaded (OK!) on input line 10.
+Class revtex4-1 Info: multicol was not loaded (OK!) on input line 10.
+
+
+LaTeX Warning: Unused global option(s):
+    [graphicx].
+
+(./draft.aux)
+\openout1 = `draft.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+
+(/usr/local/texlive/2010/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count108
+\scratchdimen=\dimen115
+\scratchbox=\box43
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen116
+\MPnumerator=\count112
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2010/04/01 v0.9 Utility functions of pdfTeX for LuaTeX (HO)
+
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2010/04/26 v1.7 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2007/09/30 v1.0 Managing graphics extensions (HO)
+)
+(/usr/local/texlive/2010/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2010/02/22 v3.7 Keyval support for LaTeX options (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2010/03/01 v1.9 Key value parser (HO)
+
+(/usr/local/texlive/2010/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2010/01/28 v1.3 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 436.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\openout3 = `draftNotes.bib'.
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 56--64
+\OT1/cmr/m/n/10 two de-gen-er-ate or near-degenerate states oc-cu-pied
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 56--64
+\OT1/cmr/m/n/10 by one elec-tron each.$[]$ Fur-ther-more bond-breaking
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 56--64
+\OT1/cmr/m/n/10 triplet ($	[]$) anti-symmetric wave func-tions can be
+ []
+
+
+Underfull \hbox (badness 1708) in paragraph at lines 56--64
+\OT1/cmr/m/n/10 Hartree-Fock$[]$ leads to an un-bal-anced (un-equal)
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--88
+
+ []
+
+[1{/usr/local/texlive/2010/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 1107) in paragraph at lines 100--103
+[]\OT1/cmr/m/n/10 While orig-i-nally, the al-ge-braic di-a-gram-matic con-
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 100--103
+\OT1/cmr/m/n/10 struc-tion scheme was de-rived for the po-lar-iza-tion
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 100--103
+\OT1/cmr/m/n/10 such as, e.g. un-re-stricted ADC (UADC)$[]$, rel-a-
+ []
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 131.
+
+(/usr/local/texlive/2010/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 131.
+
+Underfull \hbox (badness 3724) in paragraph at lines 133--137
+\OT1/cmr/m/n/10 Orthogonalization of the non-orthogonal cor-re-lated
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--137
+
+ []
+
+[2] [3]
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 210.
+
+[4]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 236.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
+
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 240--241
+\OT1/cmr/m/n/10 ob-tain only small de-vi-a-tions from the ex-per-i-men-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
+<benzyne.png, id=36, 403.24855pt x 140.43033pt>
+File: benzyne.png Graphic file (type png)
+ <use benzyne.png> [5]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 340.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+[6 <./benzyne.png>]
+
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 382.
+
+<tmm.png, id=45, 390.55913pt x 199.87015pt>
+File: tmm.png Graphic file (type png)
+ <use tmm.png>
+Underfull \hbox (badness 1215) in paragraph at lines 423--425
+[]\OT1/cmr/m/n/10 The adi-a-batic Singlet-Triplet Gaps of atoms and
+ []
+
+[7 <./tmm.png>] (./draft.bbl
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no … in font cmr8!
+Missing character: There is no Â in font cmr8!
+Missing character: There is no › in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ¢ in font cmr8!
+Missing character: There is no Â in font cmr8!
+Missing character: There is no € in font cmr8!
+Missing character: There is no Â in font cmr8!
+Missing character: There is no ™ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ƒ in font cmr8!
+Missing character: There is no Å in font cmr8!
+Missing character: There is no ’ in font cmr8!
+ [8]
+Missing character: There is no Â in font cmbx8!
+Missing character: There is no € in font cmbx8!
+Missing character: There is no Â in font cmbx8!
+Missing character: There is no “ in font cmbx8!
+)
+
+Class revtex4-1 Warning: Command \draft is obsolete;
+Invoke option draft instead..
+
+[9] (./draft.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4403 strings out of 493747
+ 59447 string characters out of 3143546
+ 167867 words of memory out of 3000000
+ 7623 multiletter control sequences out of 15000+200000
+ 16000 words of font info for 56 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 38i,13n,27p,1626b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><
+/usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2010/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+10/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/201
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2010/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2010
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2010/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2010/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2010/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2010/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2010/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on draft.pdf (9 pages, 486968 bytes).
+PDF statistics:
+ 131 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

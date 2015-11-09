@@ -1,0 +1,434 @@
+\documentclass[aip,graphicx,amsmath,reprint]{revtex4-1}
+%\documentclass[aip,reprint]{revtex4-1}
+
+\draft % marks overfull lines with a black rule on the right
+\usepackage{graphicx}% Include figure files
+\usepackage{color}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+
+\begin{document}
+
+% Use the \preprint command to place your local institutional report number 
+% on the title page in preprint mode.
+% Multiple \preprint commands are allowed.
+%\preprint{}
+
+\title{Singlet-triplet gaps of atoms and diradicals calculated via the spin-flip algebraic diagrammatic construction scheme of third order } %Title of paper
+
+% repeat the \author .. \affiliation  etc. as needed
+% \email, \thanks, \homepage, \altaffiliation all apply to the current author.
+% Explanatory text should go in the []'s, 
+% actual e-mail address or url should go in the {}'s for \email and \homepage.
+% Please use the appropriate macro for the type of information
+
+% \affiliation command applies to all authors since the last \affiliation command. 
+% The \affiliation command should follow the other information.
+
+\author{Daniel Lefrancois}
+\author{Dirk Rehn}
+\author{Andreas Dreuw}
+\email{dreuw@uni-heidelberg.de}
+%\email[]{Your e-mail address}
+%\homepage[]{Your web page}
+%\thanks{}
+%\altaffiliation{}
+\affiliation{Interdisciplinary Center for Scientific Computing, Ruprecht-Karls University, Im Neuenheimer Feld 368,
+69120 Heidelberg, Germany}
+
+% Collaboration name, if desired (requires use of superscriptaddress option in \documentclass). 
+% \noaffiliation is required (may also be used with the \author command).
+%\collaboration{}
+%\noaffiliation
+
+\date{\today}
+
+\begin{abstract}
+For the investigation of singlet-triplet gaps (STG) in diradicals the spin-flip (SF) approach for the algebraic diagrammatic construction (ADC) scheme for the polarization propagator in third order perturbation theory (SF-ADC(3)) has been applied to calculate the adiabatic energy separations between low-lying singlet and triplet states. Due to the methodology of the SF approach the singlet and triplet states are treated as equal since they are part of one and the same determinant subspace. The equal subspace leads to a systematically more accurate description of e.g. diradicalic systems as the classical single-reference methods. Furthermore, due to the employment of analytical gradients of ADC, geometry optimizations of the singlet and triplet states were done using the SF-ADC(3) method, leading to an consistent description of the system. For the investigated systems in this work the over-all absolute error of the calculated STG is between 0.6 - 2.4 kcal/mol (compared to experimental values) and can thus be described as very accurate\end{abstract}
+
+\pacs{}% insert suggested PACS numbers in braces on next line
+
+\maketitle %\maketitle must follow title, authors, abstract and \pacs
+
+% Body of paper goes here. Use proper sectioning commands. 
+% References should be done using the \cite, \ref, and \label commands
+\section{Introduction}
+In this work we present the calculation of the adiabatic energy separations between low-lying singlet and triplet states in small diradicalic systems following the previous work in this field.\cite{Krylov2002, Ziegler2005, Krylov2003, Yang2015, Yang2011} These singlet-triplet gaps (STG) have been of huge interest in recent scientific work due to their close relation to singlet fission.\cite{Michl2006, Michl2010, Michl2013} In singlet fission a singlet excited state decays into two triplet states. A deeper understanding of singlet fission is the key point of many recent papers due to its usage in solar cell technologies. \cite{Michl2006, Michl2010-2, Baldo2011, Musgrave2010,Greenham2012}\\
+Diradicalic systems can be described as systems with two degenerate or near-degenerate states occupied by one electron each.\cite{Salem1972} Furthermore bond-breaking reactions are also described diradicalic systems since we separate the two bonding electrons into two different (near)-degenerate states.\\
+Considering a diradicalic system, in the simplest case represented by two electrons in two molecular orbitals, we are able to create six Slater determinants. Using the six Slater determinants and considering the Pauli principle\cite{Pauli1925} the following three singlet($\Psi^{s}_i$) and three triplet ($\Psi^{t}_i$) anti-symmetric wave functions can be written as in equations  \eqref{eq:slaters1}-\eqref{eq:slatert3}.
+\\
+Considering a diradicalic system, in which two states (e.g. $\phi_1$ and $\phi_2$) are nearly or completely degenerate, the resulting singlet wave functions consists of two equally (or nearly equal) determinants. Using a classical single-reference quantum chemical method (e.g. Hartree-Fock\cite{Hartree1928, Fock1930} leads to an unbalanced (unequal) description of the the two relevant determinants within the wave functions $\Psi^{s}_{1-3}$ and $\Psi^{t}_1$.
+\\
+\begin{small}
+\begin{subequations}
+\begin{align}
+\Psi^{s}_1 &= \frac{1}{2}[\lambda(\phi_1)^2 - \sqrt{1-\lambda^2}(\phi_2)^2](\alpha\beta+\beta\alpha),\hspace{0.5cm}&m_s=0
+\label{eq:slaters1}
+\\
+\Psi^{s}_2 &= \frac{1}{2}[\lambda(\phi_1)^2 - \sqrt{1-\lambda^2}(\phi_2)^2](\alpha\beta-\beta\alpha),\hspace{0.5cm}&m_s=0
+\label{eq:slaters2}
+\\
+\Psi^{s}_3 &= \frac{1}{2}(\phi_1\phi_2+\phi_2\phi_1)(\alpha\beta-\beta\alpha),\hspace{0.5cm}&m_s=0
+\label{eq:slaters3}
+\\
+\Psi^{t}_1 &= \frac{1}{2}(\phi_1\phi_2+\phi_2\phi_1)(\alpha\beta+\beta\alpha),\hspace{0.5cm}&m_s=0
+\label{eq:slatert1}
+\\
+\Psi^{t}_2 &= \frac{1}{2}(\phi_1\phi_2+\phi_2\phi_1)(\alpha\alpha),\hspace{0.5cm}&m_s=1
+\label{eq:slatert2}
+\\
+\Psi^{t}_3 &= \frac{1}{2}(\phi_1\phi_2+\phi_2\phi_1)(\beta\beta),\hspace{0.5cm}&m_s=1
+\label{eq:slatert3}
+\end{align}
+\end{subequations}
+\end{small}
+
+Here $\phi_i\phi_j$ represent a shorthand notation for the spatial part $\phi_i(1)\phi_j(2)$, and $\alpha\beta$ for the spin part $\alpha(1)\beta(2)$, respectively. The quantum chemical behavior of diradicals has been studied extensively with the previous six wave functions. For further detailed informations the reader is advised to the referenced literature.\cite{Salem1972, Borden1982, Michl1987, Krylov2002}
+\\
+
+In the last decade a huge amount of different multi-reference (MR-) and multi-configurational (MC-) methods has been developed such as complete active space self consistent field (CASSCF)\cite{Gordon1998, Olsen2011} and multi-configurational self consistent field (MCSCF)\cite{Gordon1998} which provide a good zeroth-order (uncorrelated) wave function for systems with multi-reference ground state. For a more accurate description a perturbative treatment of the wave function is included in multi-reference perturbation theory (e.g. CASPT2)\cite{Roos2007} and multi-reference configuration interaction (e.g. MR-CISD)\cite{Knowles1988, Shepard2012}. Furthermore there are various multi-reference variants of coupled cluster (MRCC)\cite{Mukherjee1999, Schaefer2007, Schaefer2010, Gauss2008} available. For an accurate description of chemical relevant systems the description of dynamical correlation is crucial. Including the dynamical correlation, these methods are known to give accurate results for multi-reference systems when the right orbital space is chosen as reference which makes them a good benchmark for newly developed methods. It should be noted that in most cases a standard orbital space much larger then the standard (2,2) is needed to describe the balance between static and dynamic correlation correct.\cite{Krylov2002}
+\\
+An alternative is offered by the so-called spin-flip (SF) method. Starting from the $m_s=+1$ triplet as reference ground state, singlet- and low-spin ($m_s=0$) triplet target states are generated via a spin-flip ($\Delta m_s=-1$) excitation.\cite{Krylov2001, Krylov2006, Krylov2004, Krylov2005, Krylov2008, Krylov2001-2, Krylov2012, Sherrill2002, Head-Gordon2012, Head-Gordon2009, Krylov2003, Lefrancois2015} Thus reconsidering equations \eqref{eq:slaters1}-\eqref{eq:slatert3} one can see that while  \eqref{eq:slatert2} is used as a reference, equations \eqref{eq:slaters1}-\eqref{eq:slaters3} are all within the SF excitation subspace. Therefore all possible $m_s=0$ wave functions are treated in an equal way for the calculation of energies and properties. In the picture of two electrons in two molecular orbitals, the reference triplet wave function \eqref{eq:slatert2} can be described by a single slater determinant. Systems which suffer from a multi-reference or spin-contaminated\cite{Krylov2000} ground state wave function but possess a stable and nearly spin-pure triplet state a further referred to as few-reference systems.\cite{Lefrancois2015} Thus using the spin-flip method, energies and properties of the singlet ground and excited states of systems with few-reference ground state can be calculated via spin-flip excited states. This term shall help to differentiate between the SF ansatz and true multi-reference methods. 
+\\
+Recently, we presented a spin-flip variant for the algebraic diagrammatic construction (ADC) scheme for the polarization propagator up to third order perturbation theory (SF-ADC(n)).\cite{Lefrancois2015} Benchmark calcuations showed the SF-ADC method to be in good agreement with the reference values for the calculation of bond-breaking, diradicaloid systems, and also for the description of conical intersectiions (CI).\cite{Lefrancois2015} Furthermore analytical gradients for the ADC method up to third order perturbation theory have been derived and implemented recently. \cite{Rehn2015} The newly derived analytical gradients for the ADC method open access to the optimization of excited states and, exploiting the spin-flip method, also to the optimization of the singlet ground state.
+\\
+The underlaying theory and computational details used in this work are briefly presented in section II. Resulting energies as well as the discussion of the calculated atomic systems is presented in section III A and the results of the larger molecular systems is presented in section III B (1-4). We then end with a brief summary of the results in section IV.
+
+
+
+\section{Theory and Computational Details}
+While originally, the algebraic diagrammatic construction scheme was derived for the polarization propagator \cite{Schirmer1982, Schirmer1995, Schirmer2004} we here present the version derived via the intermediate state representation (ISR).\cite{Schirmer2004} For the classical derivation we would advise the reader to the original papers.\cite{Schirmer1982, Schirmer1995, Schirmer2004} Several variants of ADC have been derived and published in the recent years, such as, e.g. unrestricted ADC (UADC)\cite{Starcke2009}, relativistic four-component ADC schemes for the polarization propagator\cite{Pernpointner2014}, core-valence-shell excitation ADC (CVS-ADC)\cite{Wenzel2014, Wenzel2014-2, Wenzel2015}, ionization-potential energy ADC (IP-ADC)\cite{Schneider2015} as well as the spin-flip ADC (SF-ADC)\cite{Lefrancois2015} which is used in this work. Using the intermediate state representation gives direct access to the excited state wave functions and thus to excited state as well as state-to-state transition properties. For the understanding of this work we next present a brief derivation of the spin-flip ansatz for ADC using the intermediate state representation.
+\\
+The ADC eigenvalue equations
+\begin{equation}
+MX =  \Omega X \hspace{1cm} X^\dagger X = 1,
+\label{adc}
+\end{equation}
+can be expressed as the representation of the shifted Hamiltonian (i.e. shifted by the ground-state energy) in the orthonormal basis of the IS $\{\tilde{\Psi}_J\}$.
+\begin{equation}
+\label{shifted_H}
+M_{IJ} = \langle\tilde{\Psi}_I|{\cal{H}}-E_0|\tilde{\Psi}_J\rangle.
+\end{equation}
+Therefore, diagonalization of the matrix {\bf{M}} (i.e. solving of equation \eqref{adc}) directly yields the excitation energies {\bf{$\omega_n$}} as diagonal elements of {\bf{M}} and the ADC eigenvectors {\bf{X$_n$}} of the transition amplitudes. Using the latter given in eq. \eqref{eq:isr1}
+\begin{equation}
+|\Psi_n\rangle = \sum_J X_{Jn}|\tilde{\Psi}_J\rangle.
+\label{eq:isr1}
+\end{equation}
+it is clear that the ADC vectors do not correspond to the excited state wavefunctions $|\Psi_n\rangle$.
+\\
+Using an appropriate, e.g. M\o ller-Plesset,  ground state wavefunction and acting with physical excitation operators on it, a non-orthogonal set of correlated excited states can be constructed according to 
+\begin{equation}
+|\Psi^0_J\rangle=\hat{C}_J|\Psi^{{\text{MPn}}}_0\rangle,
+\label{eq:isr2}
+\end{equation}
+with the excitation operators $\{\hat{C}_J\}$ defined as 
+\begin{equation}
+\{\hat{C}_J\} = \{c_{a\sigma}^\dagger c_{i\sigma}; \hspace{0.1cm}c_{a\sigma}^\dagger c_{b\tau}^\dagger c_{i\sigma} c_{j\tau}; \dots \},
+\label{exop}
+\end{equation}
+Here the single-particle-states (spin orbitals)  $|\phi_{p\sigma}\rangle$ are denoted with a,b,c for unoccupied (virtual), and i,j,k for occupied orbitals. Using single and double excitation operators yields a set of singly excited, so-calles particle-hole (p-h) states, and doubly excited, two-particle-two-hole (2p-2h) states which build the configuration subspace of ADC. Following the scheme of classical excitation ADC the excitation operators ${\hat{C}_n}$ are restricted to spin conserving ($\Delta m_s=0$) excitations. For the SF-ADC variant the excitation operators ${\hat{C}_n}$ is restricted to exactly one spin-flipping ($\Delta m_s=-1$) excitations resulting in
+\begin{equation}
+\{\hat{C}_J\} = \{c_{a\beta}^\dagger c_{i\alpha}; \hspace{0.1cm}c_{a\beta}^\dagger c_{b\sigma}^\dagger c_{i\alpha} c_{j\sigma}, \hspace{0.25cm} \text{a \textless~ b, i \textless~ j}\}
+\label{eq:sfx}
+\end{equation}
+It should be denoted that in the case of higher excitations the following spins underly the $\Delta m_s=0$ rule. Following this conceptually simple procedure and allowing double, triple, or higher number of spin-flip excitations, higher order of spin-flip variants can be created. However double spin-flip (2SF) is the only variant realized so far e.g. as 2SF-EOM-CC.\cite{Krylov2009} 
+\\
+Orthogonalization of the non-orthogonal correlated excited states via Gram-Schmidt yields the intermediate states $\{\tilde{\Psi}_J\}$ which build the corresponding ADC matrix according to eq. (\ref{shifted_H}). Using the excitation operators eq. \eqref{eq:sfx} for the creation of guess vectors the lowest eigenvalues (i.e. the lowest ADC excitation energies) of Matrix {\bf{M}} can be obtained via Davidson diagonalization procedure. \cite{Davidson1989} \\
+
+For the calculation of the adiabatic STG all calculations have been performed using the SF-ADC(3)\cite{Lefrancois2015} method. Furthermore, due to to relatively small size of the calculated atoms and molecules, the cc-pVQZ and cc-pVTZ\cite{Dunning1989} basis could be applied the most of the computed systems. The DZP basis has been applied to the carbon, oxygen and silicon atoms. Furthermore a two-point extrapolation to the complete basis set (CBS) limit has been calculated. Therefore the absolute energies of the corresponding singlet at triplet states (of the cc-pVTZ and cc-pVQZ basis) were extrapolated to the CBS limit via equation \eqref{eq:cbs} and the STG were calculated from the extrapolated energies. 
+\begin{equation}
+E_{{\text{CBS}}} = E_X+AX^{-3}
+\label{eq:cbs}
+\end{equation}
+Here E$_{CBS}$ is the extrapolated energy and E$_X$ is the absolute energy within the basis set. Furthermore X is the cardinal number of the basis set (e.g. X=3 and X=4 for the cc-pVTZ and cc-pVQZ, respectively) and A the fitting parameter which is derived so that equation \eqref{eq:cbs} is satisfied for the two bases.
+All SF-ADC calculations have been performed using the \texttt{adcman} module within a developers version of the \mbox{Q-Chem} 4.3\cite{qchem2015} package.
+
+\section{Computational Results and Discussion}
+The Computational part is splitted in two parts. In section {\bf{A}} the $^3$P-$^1$D STG of atoms were calculated. Therefore the vertical spin-flip excitations of the atom are computed via the SF-ADC(3) method and thus the STG between the ground state and the corresponding excited state can be directly determined. In section {\bf{B}} the adiabatic STG of different classes of diradicalic molecules are shown. We therefore optimized the molecules via SF-ADC(3) in the ground- (first target state in SF theory) and the corresponding excited states and evaluated the STG energies (E$^{{\text{STG}}}$) as energy difference between the absolute energies of the optimized states. (E$^{{\text{STG}}}$=E$^{{\text{GS}}}$-E$^{{\text{XS}}}$)\\
+The results are compared to SF- and non-SF methods from coupled-cluster theory\cite{Krylov2002}, configuration interaction theory\cite{Krylov2002}, TD-DFT theory\cite{Ziegler2005, Krylov2003, Yang2015}, fractional-spin\cite{Yang2011} and as far as available also with experimental data\cite{Herzberg1979, Lineberger1998, Lineberger1996, Jensen2000, Kraemer1997, Ruscic1987, Campargue1998, Cho1989, Bunker1998}. The set of molecules for the following calculations have been well-studied in literature, thus we are able to compare to a large amount of computed data as well as experimental values.\cite{Krylov2002, Ziegler2005, Krylov2003, Yang2015, Yang2011} We would like to note that in the cited publications the way of calculating the adiabatic STG differs by the way, the geometries are observed. While in this work all geometries are optimized at the same level of theory (i.e. SF-ADC(3)) as the energies are obtained, in the other publications the level of theory of optimizations and single-point calculations can vary (e.g. the STG of the CH$_2$ molecule from Ref.~\onlinecite{Krylov2002} were obtained via SF-CIS, SF-CIS(D), and SF-OD on full configuration interaction optimized structures). For a better comparison this is always denoted within the footnotes of the tables.
+
+
+\subsection{Singlet-Triplet Gaps in Atoms}
+As a first basic approach the STG energies (E${^{{\text{STG}}}}$) of three atoms (e.g. carbon, oxygen, and silicon) are chosen. Due to the relatively small size the three atoms could be calculated with the cc-pVQZ as well as smaller basis sets. Furthermore due to the simplicity of atoms (i.e. no considerations about geometry and zero point energy (ZPE) are necessary) the STG can directly be calculated as the vertical excitation energies from the $^3$P ground state to the excited $^1$D state.
+
+\begin{table*}
+\caption{\label{tab:atoms} Energies of the STG (E$^{{\text{STG}}}$) of different spin-flip methods for the carbon, oxygen, and silicon atom compared to experimental values. Absolute mean errors (AME) are given for the cc-pVTZ and cc-pVQZ basis for all three atoms. All energies are given in eV.}
+\begin{ruledtabular}
+\begin{tabular}{lccccccccc}
+Basis & ADC(3) & SF-ADC(3) & CIS\footnotemark[2] &SF-CIS\footnotemark[2] &CIS(D)\footnotemark[2] &SF-CIS(D)\footnotemark[2] & EOM-OD\footnotemark[2] & SF-OD\footnotemark[2] \\
+\hline
+&&&&\\
+&&&{\bf{Carbon}}&&\\
+&&&&\\
+DZP& 3.920&1.440 & 1.645 & 1.484 & 1.478 & 1.472 & 1.520 &1.462 \\ 
+cc-pVTZ&1.998&   1.295 & 1.413 & 1.342 & 1.316&& \\ 
+cc-pVQZ&1.874& 1.250 &1.658 & 1.403 & 1.300 &1.300 & 1.342 & 1.270 \\ 
+CBS-2p&&1.250&1.396&1.270&1.236\\
+&&&&\\
+Expt.\footnotemark[1]&1.260&&&\\
+&&&&\\
+
+&&{\bf{Oxygen}}&&\\
+&&&&\\
+DZP&& 2.150  & 2.307 & 2.168 & 2.126 & 2.141& 2.209 & 2.154 \\ 
+cc-pVTZ&4.272&  2.030 & 2.117 & 2.030 & 2.024 \\ 
+cc-pVQZ&2.812& 1.987& 2.334  & 2.116 & 1.963 & 1.990 & 2.041 & 1.981 \\ 
+CBS-2p&& 1.988 &2.114&1.960&1.950\\
+&&&&\\
+Expt.\footnotemark[1]&1.970&&&\\
+&&&&\\
+
+&&{\bf{Silicon}}&&\\
+&&&&\\
+cc-pVTZ&2.418&  0.796 & 1.196 & 0.863 & 0.880 & 0.827 & 0.881 & 0.793 \\ 
+cc-pVQZ&2.392& 0.750 &  1.180 & 0.845 &  0.820 &0.787 & 0.834  &0.747 \\ 
+CBS-2p&& 0.750 &&&\\
+&&&&\\
+Expt.\footnotemark[1]&0.750&&&\\
+&&&&\\
+
+
+AME\footnotemark[4]&1.569&0.047&0.138&0.073&0.051\\
+AME\footnotemark[5]&1.033&0.009&0.397&0.128&0.039&0.032&0.079&0.008\\
+\end{tabular}
+\end{ruledtabular}
+\footnotetext[1]{From Ref.~\onlinecite{Sventitskii1968}}
+\footnotetext[2]{From Ref.~\onlinecite{Krylov2002}}
+\footnotetext[3]{Values for FCI/DZP are 1.471 for carbon and 2.166 for oxygen~\onlinecite{Krylov2002}}
+\footnotetext[4]{for cc-pVTZ}
+\footnotetext[5]{for cc-pVQZ}
+\end{table*}
+
+In Table \ref{tab:atoms} the singlet-triplet gap energies (E$^{{\text{STG}}}$) of the three investigated atoms are shown. While SF-ADC(3) with the small DZP basis set gives an relatively large error of about 0.18 eV (4.15 kcal/mol) the error for the cc-pVTZ and cc-pVQZ decreases to 0.035 eV (0.81 kcal/mol) and 0.01 eV (0.23 kcal/mol) respectively. The extrapolated energy also exhibits an error of 0.01 eV (0.23 kcal/mol) which is due to the fact that the energy for the cc-pVQZ basis is already near the value at the CBS limit. The energies for SF-CIS, SF-CIS(D), and the SF-OD method exhibit larger error decreasing with higher order of theory. Interestingly the extrapolated energy for SF-OD yields an error of only 0.024 eV (0.55 kcal/mol). For comparison the energies of the corresponding non-SF variants are also shown in table \ref{tab:atoms}. The direct comparison of ADC(3)/SF-ADC(3), CIS/SF-CIS and EOM-OD/EOM-SF-OD shows an improvement in the STG energies for the SF-variants compared the non-SF ones, while for CIS(D)/SF-CIS(D) the energies are very similar. The calculated absolute mean error (AME) also shows this discrepancy as well as the improvement of the SF methods. For the calculated STG energies of atoms the EOM-SF-OD and the newly developed SF-ADC(3) method show errors of about 0.008 eV (0.18 kcal/mol) and 0.009 eV (0.21 kcal/mol), respectively. These results show an accurate treatment of the systems with resulting energies near chemical accuracy.
+
+
+
+
+\subsection{Adiabatic STG in molecules}
+For the calculation of the STG in larger molecular systems, several classes of diradicalic molecules were used. Small diatomic diradicals such as the NH, OH$^+$, NF, and the O$_2$ molecules were evaluated as well es carbene-like diradicals such as the CH$_2$, NH$_2^+$, SiH$_2$, and PH$_2^+$. Furthermore the STG of the even larger four-$\pi$-electron diradical trimethylenemethane (TMM) and the three constitutional isomers of benzyne (i.e. ortho-, metha-, and para-benzyne) were evaluated with the SF-ADC(3) method.
+
+\subsubsection{Diatomic Diradicals}
+As a first step towards larger systems, the STG of diatomic molecules are calculated. Therefore to obtain the adiabatic excitation energies the molecules are optimized with SF-ADC(3) in the $^3\Sigma$ and $^1\Delta$ states. The singlet-triplet state separation energy is than calculated as E($^1\Delta)-E(^3\Sigma)$. The calculated molecules (NH, OH$^+$, NF, and O$_2$) obtain an diradicalic singlet state and thus are difficult to treat with classical single reference methods.
+
+\begin{table}
+\caption{\label{tab:diatom}Energies of the STG (E$^{{\text{STG}}}$) of different spin-flip and non-spin-flip methods for the NH, OH$^+$, NF, and O$_2$ molecules compared to experimental values. All values are given in eV. Absolute mean errors (AME) are calculated with respect to the experimental data given in the table.}
+\begin{ruledtabular}
+\begin{tabular}{lcccccc}
+& SF-ADC(3)\footnotemark[1] & SF-ADC(3)\footnotemark[2] & SF-OD\footnotemark[3] & pp-PBE\footnotemark[4]& Expt.\footnotemark[5]\\
+\hline
+NH&1.650&1.600&1.605&1.756&1.558\\
+OH$^+$&2.226&2.195&2.189&2.350&2.190\\
+NF&1.541&1.500&1.491&1.227&1.487\\
+O$_2$&1.039&1.023&1.061&1.019&0.980\\
+&&&&&\\
+AME&0.060&0.026&0.033&0.164&\\
+\end{tabular}
+\end{ruledtabular}
+\footnotetext[1]{cc-pVTZ basis set, geometries are optimized via SF-ADC(3)/cc-pVTZ}
+\footnotetext[2]{cc-pVQZ basis set, geometries are optimized via SF-ADC(3)/cc-pVQZ}
+\footnotetext[3]{cc-pVQZ basis set, experimental and FCI optimized geometries used (cf. Ref.~\onlinecite{Krylov2002}) }
+\footnotetext[4]{aug-cc-pVDZ basis set, geometries adopted from Ref.~\onlinecite{Yang2011} (Ref.~\onlinecite{Yang2015})}
+\footnotetext[5]{From Ref.~\onlinecite{Herzberg1979}}
+\end{table}
+
+In Table \ref{tab:diatom} we present the energies for the adiabatic singlet-triplet splitting in the calculated diatomic molecules. We here present as comparison the results for the SF-OD method and the particle-particle PBE (pp-PBE) functional for density functional theory. Both methods have been benchmarked and published recently.\cite{Krylov2002,Yang2015}\\
+The adiabatic STG for the diatomic systems calculated with SF-ADC(3) show an AME of only 0.026 eV (0.60 kcal/mol), for the cc-pVQZ basis set with the largest error being 0.043 eV (0.99 kcal/mol) for the O$_2$ molecule. The cc-pVTZ basis yields an error of about 0.060 eV (1.38 kcal/mol) with the largest error of 0.092 eV (2.12 kcal/mol) for the NH molecule. Again the classical ADC(3) energies have been computed yielding energies of 2.311, 2.181, 3.096, and 2.267 eV for the NH, NF, OH, and O$_2$ molecules using the cc-pVQZ basis and 2.371, 2.225, 3.146, and 2.255 eV using the cc-pVTZ basis ending up in an AME of about 0.91 eV (20.99 kcal/mol) and 0.95 eV (21.9 kcal/mol) respectively. For the calculation of the classical ADC(3) method, the optimized SF-ADC(3) geometries are used. The SF-OD method also gives quite accurate results with an AME of 0.033 eV (0.76 kcal/mol) and the largest error of 0.081 eV (1.87 kcal/mol). The pp-PBE functional exhibits larger errors then the oder two methods and gives an AME of 0.164 eV (3.78 kcal/mol) with the largest deviation being 0.260 eV (6.0 kcal/mol) for the NF molecule. While the two wave-function based methods seem to perform very good also for the diatomic systems the pp-PBE functional for DFT exhibits slightly larger errors. 
+
+\subsubsection{Carbene-like Diradicals}
+As next step the STG for larger electronic systems has been calculated. We here present the results for the group of carbene-like diradical molecular systems like CH$_2$, NH$_2^+$, SiH$_2$, and PH$_2^+$. For this purpose the the triplet ${\tilde{X}}$$^3$B$_1$ ground state as well as the $^1$A$_1$, $^1$B$_1$, and 2$^1$A$_1$ excited states were optimized via the SF-ADC(3) method. The adiabatic STG are then calculated as difference between the absolute energies of the optimized ${\tilde{X}}$$^3$B$_1$ ground- and the corresponding excited state.\\
+
+In Table \ref{tab:carbene1} and Table \ref{tab:carbene2} we present the computed results for the four  carbene-like molecules. Again we obtain only small deviations from the experimental values with the SF-ADC(3) methods. The AME are  0.017 eV (0.39 kcal/mol) for the CH$_2$ molecule and 0.058 eV (1.34 kcal/mol), 0.026 eV (0.60 kcal/mol), and 0.076 eV (1.75 kcal/mol) for the NH$_2^+$, SiH$_2$, and PH$_2^+$ molecules, respectively, yielding a totale absolute mean error (TAME) of about 0.044 eV (1.02 kcal/mol) for the cc-pVQZ basis. For the cc-pVTZ basis the TAME is 0.055 eV (1.27 kcal/mol) and thus yields also results in the size of about 1 - 1.5 kcal/mol.  The states denoted with $nc$ could not be evaluated due to convergence issues of the triplet reference state. Since the non-converged states are not compared to experimental values in any method and thus have no influence on the mean errors of the methods they are of no further interest for this work. Furthermore also the SF-OD and the pp-PBE give reasonable results with TAME$^\prime$s of 0.069 eV (1.59 kcal/mol) and 0.299 eV (6.90 kcal/mol), respectively. \\In this place it should be mentioned that in the paper of the pp-DFT results (Ref.~\onlinecite{Yang2015}) TAME$^\prime$s of about 0.152 (3.5 kcal/mol) and 0.160 (3.7 kcal/mol) are reported. This follows from the circumstances that the authors use a different set of experimental and computational reference data. For this work, the values have been reevaluated with respect to our reference data, which was also used in the original paper (Ref.~\onlinecite{Krylov2002}).\\
+
+
+\begin{table}
+\caption{\label{tab:carbene1} Energies of the STG (E$^{{\text{STG}}}$) of different spin-flip and non-spin-flip methods. Absolute mean errors (AME) are given for each molecule and as total absolute mean errors (TAME) in the corresponding basis. All excitation energies are given in eV. The reference triplet ground state absolute energies are given in Hartree (E$_h$)}
+\begin{ruledtabular}
+\begin{tabular}{lcccccc}
+CH$_2$&${\tilde{X}}$ $^3$B$_1$&$^1$A$_1$&$^1$B$_1$&2$^1$A$_1$&AME\\
+\hline
+SF-ADC(3)\footnotemark[1]&-39.08671&0.452&1.478&2.659&0.058\\
+SF-ADC(3)\footnotemark[2]&-39.10994 &0.420&1.428&2.594&0.017\\
+SF-CIS\footnotemark[3]&-38.93254&0.883&1.875&3.599&0.472\\
+SF-CIS(D)\footnotemark[3]&-39.05586&0.613&1.646&2.953&0.222\\
+SF-OD\footnotemark[3]&-39.08045&0.514&1.564&2.715&0.132\\
+SF-B3LYP\footnotemark[4]&&0.017&1.006&1.999&0.396\\
+SF-PBE\footnotemark[4]&&0.533&1.401&2.814&0.084\\
+pp-B3LYP\footnotemark[5]&&0.160&1.388&2.294&0.134\\
+pp-PBE\footnotemark[5]&&0.256&1.453&2.376&0.081\\
+Expt.&&0.390\footnotemark[6]&1.425\footnotemark[6]&\\
+&&&&&\\
+NH$_2^+$&${\tilde{X}}$ $^3$B$_1$&$^1$A$_1$&$^1$B$_1$&2$^1$A$_1$&AME\\
+\hline
+SF-ADC(3)\footnotemark[1]&-55.39615&1.253&1.903&3.374&0.053\\
+SF-ADC(3)\footnotemark[2]&-55.42475&1.223&1.857&3.331&0.058\\
+SF-CIS\footnotemark[3]&-55.22731&1.673&2.151&4.375&0.297\\
+SF-CIS(D)\footnotemark[3]&-55.37545&1.342&1.959&3.635&0.047\\
+SF-OD\footnotemark[3]&-55.40259&1.305&1.941&3.410&0.037\\
+SF-B3LYP\footnotemark[4]&&0.750&1.379&2.728&0.551\\
+SF-PBE\footnotemark[4]&&1.357&1.878&3.734&0.095\\
+pp-B3LYP\footnotemark[5]&&1.002&1.821&3.044&0.204\\
+pp-PBE\footnotemark[5]&&1.114&1.895&3.144&0.111\\
+Expt.&&1.306\footnotemark[6]&1.891\footnotemark[7]&\\
+&&&&&\\
+
+\end{tabular}
+\end{ruledtabular}
+\footnotetext[1]{cc-pVTZ basis set, geometries are optimized via SF-ADC(3)/cc-pVTZ}
+\footnotetext[2]{cc-pVQZ basis set, geometries are optimized via SF-ADC(3)/cc-pVQZ}
+\footnotetext[3]{TZ2P basis set - CH$_2$/NH$_2$ geometries optimized with FCI/TZ2P and CISD/TZ2P(f,d), respectively (Ref.~\onlinecite{Krylov2002})}
+\footnotetext[4]{cc-pVTZ basis set - (Ref.~\onlinecite{Krylov2012})}
+\footnotetext[5]{aug-cc-pVDZ basis set - CH$_2$/NH$_2$ geometries optimized with FCI/TZ2P and CISD/TZ2P(f,d), respectively (Ref.~\onlinecite{Yang2015})}
+\footnotetext[6]{From Ref.~\onlinecite{Bunker1998}}
+\footnotetext[7]{From Ref.~\onlinecite{Jensen2000}}
+\end{table}
+
+\begin{table}
+\caption{\label{tab:carbene2} Energies of the STG (E$^{{\text{STG}}}$) of different spin-flip and non-spin-flip methods. Absolute mean errors (AME) are given for each molecule and as total absolute mean errors (TAME) in the corresponding basis. All excitation energies are given in eV. The reference triplet ground state absolute energies are given in Hartree (E$_h$)}
+\begin{ruledtabular}
+\begin{tabular}{lcccccc}
+SiH$_2$&${\tilde{X}}$ $^1$A$_1$&$^3$B$_1$&$^1$B$_1$&$^1$A$_1$&AME\\
+\hline
+SF-ADC(3)\footnotemark[1]&-290.22226&0.897&2.003&nc&0.044\\
+SF-ADC(3)\footnotemark[2]&-290.22045&0.900&1.970&5.230&0.026\\
+SF-CIS\footnotemark[3]&-290.03701&0.503&2.199&3.945&0.339\\
+SF-CIS(D)\footnotemark[3]&-290.27260&0.776&2.122&3.850&0.203\\
+SF-OD\footnotemark[3]&-290.29961&0.866&1.994&3.537&0.055\\
+SF-B3LYP\footnotemark[4]&&1.305&0.707&2.021&0.148\\
+SF-PBE\footnotemark[4]&&0.963&0.880&2.437&0.551\\
+pp-B3LYP\footnotemark[5]&&1.245&1.140&2.342&0.562\\
+pp-PBE\footnotemark[5]&&1.227&1.145&2.285&0.550\\
+Expt.&&-0.91$\pm$0.03\footnotemark[6]&1.928\footnotemark[7]&&&\\
+&&&&&\\
+PH$_2^+$&${\tilde{X}}$ $^1$A$_1$&$^3$B$_1$&$^1$B$_1$&$^1$A$_1$&AME\\
+\hline
+SF-ADC(3)\footnotemark[1]&-341.73599&0.777&2.024&nc&0.066\\
+SF-ADC(3)\footnotemark[2]&-341.75773&0.803&2.019&nc&0.076\\
+SF-CIS\footnotemark[3]&-341.55130&0.388&2.166&4.541&0.304\\
+SF-CIS(D)\footnotemark[3]&-341.71948&0.682&2.134&4.015&0.141\\
+SF-OD\footnotemark[3]&-341.74916&0.761&2.015&3.728&0.053\\
+SF-B3LYP\footnotemark[4]&&1.266&0.798&2.233&0.819\\
+SF-PBE\footnotemark[4]&&0.824&1.062&2.801&0.466\\
+pp-B3LYP\footnotemark[5]&&1.067&1.305&2.649&0.466\\
+pp-PBE\footnotemark[5]&&1.019&1.310&2.600&0.440\\
+Expt.&&-0.750$\pm$0.05\footnotemark[8]&1.920\footnotemark[8]&\\
+&&&&&\\
+
+\end{tabular}
+\end{ruledtabular}
+\footnotetext[1]{cc-pVTZ basis set, geometries are optimized via SF-ADC(3)/cc-pVTZ}
+\footnotetext[2]{cc-pVQZ basis set, geometries are optimized via SF-ADC(3)/cc-pVQZ}
+\footnotetext[3]{TZ2P basis set - geometries are optimized with CISD/TZ2P(f,d)(Ref.~\onlinecite{Krylov2002})}
+\footnotetext[4]{cc-pVTZ basis set - (Ref.~\onlinecite{Krylov2012})}
+\footnotetext[5]{aug-cc-pVDZ basis set - geometries are optimized with CISD/TZ2P(f,d) (Ref.~\onlinecite{Yang2015})}
+\footnotetext[6]{From Ref.~\onlinecite{Ruscic1987}}
+\footnotetext[7]{From Ref.~\onlinecite{Campargue1998}}
+\footnotetext[8]{From Ref.~\onlinecite{Cho1989}}
+\end{table}
+
+
+
+Within the STG of SiH$_2$ the energy for the excited singlet A$_1$ state shows a large derivation of 1.7 eV to the other methods. This is quite interesting since for the other states, especially SF-ADC(3) and SF-OD seem to be in good agreement. Furthermore it can be seen that while for the neutral systems the cc-pVQZ basis yields accurate results, the cc-pVTZ basis seems to perform better for cationic systems.
+
+
+\subsubsection{Benzyne}
+The benzyne molecule is a diradicalic isomeric system where the isomer descriptors (e.g. \mbox{ortho (o-)}, \mbox{meta (m-)}, and \mbox{para (p-)}) define the localization of the radicals (cf. Figure \ref{fig:benzyne}). Due to its diradicalic nature the benzene molecule exhibits a multi-reference ground-state wave function as well as diradicalic and multi-referent excited states.\\
+In Table \ref{tab:benzyne} we present the resulting STG energies for the three benzyne isomers. The SF-ADC(3) method shows small deviations of 0.042 eV (0.969 kcal/mol) for the p-benzyne compared to experimental data. While for the o-benzyne the error is slightly larger with about 0.103 eV (2.375 kcal/mol) the error for the m-benzyne deviates by 0.644 eV (14.851 kcal/mol) yielding a TAME of 0.263 eV (6.065 kcal/mol). The large error for the m-benzyne can be explained by a spin-contaminated triplet reference state. (S$^2 = 2.610$) of the SCF ground-state. The SF-OD method again shows an accurate description with AME$^\prime$s of 0.004 eV (0.092 kcal/mol), 0.074 eV (1.707 kcal/mol), and 0.006 eV (0.130 kcal/mol) for the o-, m-, and p-isomere. The TAME for SF-OD is then 0.028 eV (0.669 kcal/mol). The pp-B3LYP method shows a similar behavior as the SF-ADC(3) where the o-benzene gives the most accurate result with an AME of 0.006 eV (0.130 kcal/mol). For the m-benezene the results are also quite accurate with an AME of  0.047 eV (1.084 kcal/mol). The p-benzene shows the largest derivation with an AME of 0.139 eV (3.205) giving an TAME of 0.064 eV (1.480 kcal/mol). The pp-PBE methods can not be evaluated due to convergence issues. (cf. Ref.~\onlinecite{Yang2015})
+\begin{figure}
+\includegraphics[width=0.4\textwidth]{benzyne.png}
+\caption{\label{fig:benzyne}Structure of the three isomers of benzyne.}
+\end{figure}
+
+
+\begin{table}[h!]
+\caption{\label{tab:benzyne}Energies of the STG (E$^{{\text{STG}}}$) of different spin-flip and non-spin-flip methods for the benzyne isomers compared to experimental values. The reference singlet ground state absolute energies are given in Hartree (E$_h$) and STG energies are given in eV. Absolute mean errors (AME) are given in round brackets.}
+\begin{ruledtabular}
+\begin{tabular}{lcccc}
+$\tilde{X}$$^1$A$_1$/$\tilde{X}$$^1$A$_g$& o-benzyne & m-benzyne& p-benzyne& \\
+\hline
+SF-ADC(3)\footnotemark[1]&-230.51992&-230.49384&-230.47651\\
+SF-CIS\footnotemark[2]&-229.49504&-229.47187&-229.46472\\
+SF-CIS(D)\footnotemark[2]&-230.45684&-230.38757&-230.41234\\
+SF-OD\footnotemark[2]&-230.50269&-230.47817&-230.45743\\
+&&&\\
+$^3$B$_2$/$^3$B$_{2u}$& o-benzyne & m-benzyne& p-benzyne& \\
+\hline
+SF-ADC(3)\footnotemark[1]&1.525 (0.103)&1.555 (0.644)&0.123 (0.042)\\
+SF-CIS\footnotemark[2]&1.007 (0.621)&0.166 (0.745)&0.014 (0.151)\\
+SF-CIS(D)\footnotemark[2]&1.548 (0.080)&0.842 (0.069)&0.092 (0.073)\\
+SF-OD\footnotemark[2]&1.632 (0.004)& 0.837 (0.074)&0.171 (0.006)\\
+SF-B3LYP\footnotemark[3]&2.033 (0.405)&1.132 (0.221)&0.299 (0.134)\\
+SF-PBE\footnotemark[3]&1.921 (0.293)&1.201 (0.290)&0.416 (0.251)\\
+pp-B3LYP\footnotemark[4]&1.622 (0.006)&0.958 (0.047)&0.026 (0.139)\\
+pp-PBE\footnotemark[4]&nc&nc&0.386 (0.221)\\
+Expt.\footnotemark[5]&1.628$\pm$0.013&0.911$\pm$0.014&0.165$\pm$0.016\\
+$\Delta$ZPE\footnotemark[6]&-0.028&0.043&0.021\\
+Expt. - $\Delta$ZPE\footnotemark[6]&1.656&0.868&0.144\\
+\end{tabular}
+\end{ruledtabular}
+\footnotetext[1]{cc-pVTZ basis set}
+\footnotetext[2]{cc-pVTZ basis on carbon and cc-pVDZ basis on hydrogen, on SF-DFT/6-311G* optimized geometries - (Ref.~\onlinecite{Krylov2002})}
+\footnotetext[3]{cc-pVTZ basis set - (Ref.~\onlinecite{Krylov2012})}
+\footnotetext[4]{aug-cc-pVDZ basis set, geometries were adopted from [b] - (Ref.~\onlinecite{Yang2015})}
+\footnotetext[5]{From Ref.~\onlinecite{Lineberger1998}}
+\footnotetext[6]{Expt. - $\Delta$ZPE value as reference - ZPE calculated at the SF-DFT/6-311G* level - (From Ref.~\onlinecite{Krylov2002})}
+\end{table}
+
+
+
+\subsubsection{Trimethylmethane}
+
+The trimethylmethane (TMM) molecule is a well-known test case for few-reference systems. In its planar D$_{3h}$ form TMM encounters a diradicalic $^3$A$_2$ ground state and thus suffers from a few-reference wave function. The first two excited states are represented by two distorted C$_{2v}$ forms of $^1$A$_1$ and $^1$B$_1$ character which lift the degeneracy within the molecule. While the $^1$A$_1$ state acquires a closed-shell form and a planar geometry the $^1$B$_1$ state is of open-shell character and shows a 90$^\circ$ twist in one of the CH$_2$ groups. The third excited state is again of D$_{3h}$ symmetry and planar form as the ground state. (cf. Figure \ref{fig:tmm})\\
+
+The triplet ground state geometry and the first excited states geometries were optimized via the SF-ADC(3) method using the cc-pVTZ basis and the adiabatic STG were calculated as difference between the absolute energies. Results are shown in Table~\ref{tab:tmm}.
+\\
+For the calculation of the TMM molecule the SF-ADC(3) methods shows an AME of 0.186 eV (4.29 kcal/mol) for the experimental and 0.098 eV (2.26 kcal/mol) for the ZPE corrected results. SF-CIS and SF-CIS(D) show a similar behavior like the SF-ADC method and yield AMEs of 0.184 eV (4.24 kcal/mol) and 0.194 eV (4.47 kcal/mol) for the experimental and 0.096 (2.21 kcal/mol) eV and 0.106 eV (2.44 kcal/mol) for the ZPE corrected energies, respectively. While the SF-PBE methods seems to underestimate the STG the SF-B3LYP shows a very good agreement to the experimental values yielding an AME of 0.009 eV (0.21 kcal/mol). The SF-OD on the other side, overestimates the STG by about 0.242 eV giving an AME of 0.242 eV (5.58 kcal/mol). The multi-configuration methods shown in this table can be used for the comparison of the used single-reference methods and the experimental values. Even the multi-configuration quadratic doubles with perturbation theory of second order (MCQDPT2) shows an STG of 0.828 eV which yields an AME of 0.129 eV (2.97 kcal/mol) and thus is in the same region as the SF-ADC(3) and SF-CIS/CIS(D) methods. Furthermore it is interesting that the SF-ADC(3) and SF-CIS methods seem to agree with the multi-configuration (MC) methods for the investigated $^1$A$_1$ state but deviate by about 0.3-0.4 eV for the $^1$B$_1$ state.
+\begin{figure}[h!]
+\includegraphics[width=0.45\textwidth]{tmm.png}
+\caption{\label{fig:tmm}Structure the ground- and first three excited states of the TMM molecule.}
+\end{figure}
+\begin{table}
+\caption{\label{tab:tmm}Energies of the STG (E$^{{\text{STG}}}$) of different spin-flip and non-spin-flip methods for the TMM molecule compared to experimental values. The reference triplet ground state absolute energies are given in Hartree (E$_h$) and STG energies are given in eV. Absolute mean errors (AME) are given in eV. The AME for the zero-point energy (ZPE) corrected experimental values are given in round brackets.}
+\begin{ruledtabular}
+\begin{tabular}{lcccccc}
+Method & $^3$A$_2$ & $^1$B$_1$ & $^1$A$_1$ & 2$^1$A$_1$&AME \\
+\hline
+SF-ADC(3)\footnotemark[1]&-155.64733&1.195&0.885&4.510&0.186(0.098)\\
+SF-CIS\footnotemark[2]&-154.91820&1.017&0.883&6.508&0.184(0.096)\\
+SF-CIS(D)\footnotemark[2]&-155.54809&1.025&0.893&3.570&0.194(0.106)\\
+SF-OD\footnotemark[2]&-155.62016&0.744&0.941&3.858&0.242(0.154)\\
+SF-B3LYP\footnotemark[3]&&0.737&0.690&2.020&0.009(0.097)\\
+SF-PBE\footnotemark[3]&&0.746&0.577&1.470&0.122(0.210)\\
+pp-B3LYP\footnotemark[4]&&0.707&1.470&4.653&0.771(0.683)\\
+pp-PBE\footnotemark[4]&&0.676&1.539&4.961&0.840(0.752)\\
+MCSCF\footnotemark[2]\footnotemark[5]\footnotemark[6]&-155.03383&0.705&0.832&&0.133(0.045)\\
+MCQDPT2\footnotemark[2]\footnotemark[5]\footnotemark[6]&-155.56828&0.710&0.828&&0.129(0.041)\\
+&&&&\\
+Expt.\footnotemark[7]&&&0.699&\\
+$\Delta$ZPE\footnotemark[8]&&&0.088&\\
+Expt. - $\Delta$ZPE\footnotemark[8]&&&0.787&\\
+\end{tabular}
+\end{ruledtabular}
+\footnotetext[1]{cc-pVTZ basis set}
+\footnotetext[2]{cc-pVTZ basis on carbon and cc-pVDZ basis on hydrogen, on SF-DFT/6-311G* optimized geometries - (Ref.~\onlinecite{Krylov2002})}
+\footnotetext[3]{cc-pVTZ basis set - (Ref.~\onlinecite{Krylov2012})}
+\footnotetext[4]{aug-cc-pVDZ basis set, geometries are adopted from [b] - (Ref.~\onlinecite{Yang2015})}
+\footnotetext[5]{From Ref.~\onlinecite{Krylov2002}}
+\footnotetext[6]{Active space: (10,10)}
+\footnotetext[7]{From Ref.~\onlinecite{Lineberger1998}}
+\footnotetext[8]{Expt. - $\Delta$ZPE value as reference- ZPE calculated via the SF-DFT/6-31G* level - (From Ref.~\onlinecite{Krylov2002})}
+\end{table}
+
+
+\section{Brief Summary}
+The adiabatic Singlet-Triplet Gaps of atoms and molecules with difficult ground state wave function have been computed and evaluated with the SF-ADC(3) method applying the recently developed analytical gradients. Optimizing the first excited target state in SF-theory yields the optimized former ground state of a system. The Comparison of the absolute energies of ground- and excited states then gives the adiabatic STG.\\
+We could show that SF-ADC(3) is a efficient method for the computation of STG in systems with few-reference wave functions like diradicalic systems, yielding an over-all absolute mean error of approximately 0.105 eV (2.42 kcal/mol) for the cc-pVTZ basis set. For the atoms and small molecules (excluding the benzyne molecule and the TMM) the cc-pVQZ basis set could also be applied yielding an over-all absolute mean error of 0.026 eV (0.60 kcal/mol). Furthermore we generically showed for the atomic and diatomic systems that while classical ADC encounters large errors for the STG due to the spin-contamination of the singlet ground state wave function, SF-ADC is capable of computing an accurate result up to an AME of 0.009 eV. 
+
+\section{Acknowledgements}
+Daniel Lefrancois acknowledges support by the Heidelberg Graduate School $"$Mathematical and Computational Methods for the Sciences$"$
+
+
+
+\bibliography{draft}
+
+\end{document}
+
